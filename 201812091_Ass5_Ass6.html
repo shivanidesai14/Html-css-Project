@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <style>
+        body,
+        html {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+        }
+        
+        .header_content {
+            display: flex;
+            margin: 10px;
+        }
+        
+        .div_logo_img {
+            width: 150px;
+            height: 30%;
+            padding: 5px;
+        }
+        
+        .logo_img {
+            width: 130px;
+            height: auto;
+        }
+        
+        .start-menu {
+            color: #00A2c7;
+            margin-left: auto;
+            font-weight: bold;
+            padding-right: 10px;
+            font-family: Graphik Meetup, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            padding: 0px 16px 0px 20px;
+            margin-top: 16px;
+        }
+        
+        .start-menu p {
+            margin: 0;
+            padding: 0px 16px;
+            border-right: 1px solid grey;
+        }
+        
+        .container .btn {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #f13a59;
+            color: white;
+            font-size: 16px;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            width: 300px;
+            font-family: Graphik Meetup, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        .container .btn:hover {
+            background-color: #fd2e51;
+        }
+        
+        .container .text {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            color: white;
+            font-size: 42px;
+            border: none;
+            text-align: center;
+            word-wrap: normal;
+            font-family: Graphik Meetup, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        .container .text1 {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            color: white;
+            font-size: 20px;
+            border: none;
+            text-align: center;
+            word-wrap: normal;
+            font-family: Graphik Meetup, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        .login {
+            color: grey;
+            margin-left: 1%;
+            color: rgba(46, 62, 72, 0.6);
+            font-family: Graphik Meetup, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        .vedio {
+            width: 100%;
+            height: 70vh;
+        }
+        
+        .sign_up {
+            margin-left: 1%;
+            margin-right: 1%;
+            margin-right: 1%;
+            color: rgba(46, 62, 72, 0.6);
+            font-family: Graphik Meetup, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        .flex-container {
+            /* display: flex;
+            justify-content: space-around; */
+            margin-left: 200px;
+            word-wrap: none;
+        }
+        
+        .flex-container>div {
+            background-color: rgb(209, 211, 210);
+            float: left;
+            margin: 5px;
+            padding: 5px;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+        
+        @media all and (max-width:1200px) {
+            .flex-container {
+                /* display: flex;
+            justify-content: space-around; */
+                margin-left: 200px;
+                word-wrap: none;
+            }
+            .flex-container>div {
+                background-color: rgb(209, 211, 210);
+                float: left;
+                margin: 5px;
+                padding: 5px;
+                font-size: 20px;
+                border-radius: 5px;
+            }
+        }
+        
+        @media all and (max-width:900px) {
+            .flex-container {
+                width: auto;
+                margin-left: 10px;
+                word-wrap: none;
+                margin-right: 10px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .flex-container>div {
+                background-color: rgb(209, 211, 210);
+                flex-wrap: wrap;
+                word-wrap: none;
+                float: left;
+                margin: 5px;
+                padding: 5px;
+                font-size: 17px;
+                border-radius: 5px;
+            }
+        }
+        
+        @media all and (max-width:400px) {
+            .flex-container {
+                width: auto;
+                margin-left: 10px;
+                word-wrap: none;
+                margin-right: 10px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .flex-container>div {
+                background-color: rgb(209, 211, 210);
+                flex-wrap: wrap;
+                word-wrap: none;
+                float: left;
+                margin: 5px;
+                padding: 5px;
+                font-size: 4px;
+                border-radius: 5px;
+            }
+        }
+        
+        @media all and (min-width:1201px) {
+            .flex-container {
+                width: auto;
+                margin-left: 200px;
+                word-wrap: none;
+                margin-right: 200px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .flex-container>div {
+                background-color: rgb(209, 211, 210);
+                flex-wrap: wrap;
+                word-wrap: none;
+                float: left;
+                margin: 5px;
+                padding: 5px;
+                font-size: 20px;
+                border-radius: 5px;
+            }
+        }
+        
+        .flex {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .inner_event {
+            margin-left: 15px;
+            margin-bottom: -10px;
+        }
+        
+        .main_event {
+            display: flex;
+            flex-flow: nowrap;
+            overflow: auto;
+            /* margin-left: 200px; */
+            width: auto;
+            margin: 0% 10% 0% 10%;
+        }
+        
+        .main_event>div {
+            margin: 5px;
+            padding: 5px;
+            background-color: #fcf7f7;
+            border-radius: 5px;
+            flex: 1 1;
+            width: 200px;
+            height: auto;
+        }
+        
+        @media all and (max-width:500px) {
+            .main_event {
+                display: flex;
+                flex-flow: nowrap;
+                overflow: auto;
+                /* margin-left: 200px; */
+                width: auto;
+                margin: 0% 10% 0% 10%;
+            }
+            .main_event div {
+                margin: 5px;
+                padding: 5px;
+                background-color: #fcf7f7;
+                border-radius: 5px;
+                flex: 1 1;
+                height: auto;
+                font-size: 15px;
+            }
+            .flex {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+        }
+        
+        .sub_cat {
+            border-radius: 15px 15px 15px 15px;
+        }
+        
+        .Main_cat {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0% 0% 0% 10%;
+            width: auto;
+        }
+        
+        .Main_cat>div {
+            margin: 5px;
+            padding: 2px;
+        }
+        
+        .footer_1 {
+            background: #0f1721;
+            height: auto;
+        }
+        
+        .inside_footer1 {
+            display: flex;
+        }
+        
+        .inside_footer1>div {
+            margin: 15px;
+            color: white;
+            flex: 1 1;
+        }
+        
+        .footer_2 {
+            display: flex;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .inside_footer_2 {
+            display: flex;
+        }
+        
+        .footer_2>div {}
+        
+        .inside_footer_2>div {
+            margin-left: 10px;
+        }
+        
+        .footer_3 {
+            background: #353E48;
+            width: auto;
+            font-family: Graphik Meetup, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        .inside_footer_3 {
+            color: white;
+            margin-left: 30px;
+            width: auto;
+            font-family: Graphik Meetup, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            padding-top: 50px;
+        }
+        
+        .inside_footer_3_flex {
+            display: flex;
+            margin-left: 10px;
+            margin-right: 100px;
+            font-size: 16px;
+            white-space: nowrap;
+            color: rgba(255, 255, 255, 0.7);
+            flex-wrap: wrap;
+        }
+        
+        .inside_footer_3_flex>div {
+            /* margin: 80px; */
+            padding: 25px;
+            flex: 1 1;
+            white-space: nowrap;
+        }
+        
+        .footer_4 {
+            background: rgb(45, 53, 61);
+            height: 80px;
+            font-family: Graphik Meetup, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            color: #ffffff;
+            padding: 10px;
+            padding-left: 20px;
+            font-size: 14px;
+        }
+        
+        @media all and (max-width:750px) {
+            .flex-container .hide_div {
+                display: none;
+            }
+        }
+        
+        @media all and (max-width:800px) {
+            body {
+                overflow-x: hidden;
+            }
+            .start-menu {
+                display: none;
+            }
+            .div_logo_img {
+                width: 150px;
+                height: 20%;
+                margin-top: 1%;
+            }
+            .login {
+                margin-left: auto;
+                margin-right: 1%;
+                margin-top: 1%;
+            }
+            .sign_up {
+                margin-left: 1%;
+                margin-right: 1%;
+                margin-top: 1%;
+                margin-right: 1%;
+            }
+            .vedio {
+                width: 100%;
+                height: 460px;
+            }
+            .container .text {
+                position: absolute;
+                top: 25%;
+                width: 100%;
+                color: white;
+                font-size: 32px;
+                border: none;
+                text-align: center;
+                word-wrap: normal;
+                font-family: Graphik Meetup, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            }
+            .container .text1 {
+                position: absolute;
+                top: 35%;
+                width: 100%;
+                left: 50%;
+                color: white;
+                font-size: 15px;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                border: none;
+                text-align: center;
+                word-wrap: normal;
+                font-family: Graphik Meetup, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            }
+            .container .btn {
+                position: absolute;
+                top: 55%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                background-color: #f13a59;
+                color: white;
+                font-size: 16px;
+                padding: 12px 24px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                text-align: center;
+                width: 350px;
+                font-family: Graphik Meetup, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            }
+            .sub_cat {
+                border-radius: 15px 15px 15px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body style="">
+    <article class="article_part">
+
+
+        <header class="header_content">
+            <div class="div_logo_img">
+                <img src="logo--script.004ada05.svg" class="logo_img">
+
+            </div>
+            <div class="start-menu">
+                <p>Start a new group</p>
+
+            </div>
+            <div class="login">
+                <p>Log in</p>
+
+            </div>
+            <div class="sign_up">
+                <p>Sign Up</p>
+
+            </div>
+
+        </header>
+        <div class="container">
+            <video class="vedio" style="object-fit: fill;  pointer-events: none;" controls autoplay="autoplay" loop>
+        <source src="video.dddafbfe.mp4" type="video/mp4">
+
+    
+      </video>
+            <h2 class="text">The real world is calling</h2>
+            <h3 class="text1">Join a local group to meet people, try something new, or do what you love.</h2>
+                <button class="btn">Join Meetup</button>
+        </div>
+        <div class="flex-container">
+
+            <div>Join a movement</div>
+            <div>Learn to cook</div>
+            <div>Train for a marathon</div>
+            <div>Build a mobile app</div>
+            <div>Hike a mountain</div>
+            <!-- <div>Practice a language</div> -->
+
+        </div>
+        <Br>
+
+        <hr style="clear:both;">
+        <br>
+        <h1 style="margin-left:10%">Popular events nearby</h1>
+        <div class="main_event">
+            <div class="Events" style="width:100%;">
+                <img src="2_event.png" height="160" width="100%">
+                <div class="inner_event">
+                    <p style="color:rgb(145, 141, 141)">Friday,March 29, 8:30 PM</p>
+                    <h3 style="word-wrap: wrap;">Let's Talk About Wordpress Over Dinner!!</h3>
+                    <div class="flex">
+                        <img src="thumb_262478452.jpeg" alt="Avatar" height="50" width="40" style="border-radius: 50%;">
+                        <p style="color:rgb(145, 141, 141);">Hosted by Bhargav M. and 2 ot.. From Ahmedabad WordPress</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Events">
+                <img src="3_event.png" height="160" width="100%">
+                <div class="inner_event">
+                    <p style="color:rgb(145, 141, 141)">Friday,March 30, 8:30 PM</p>
+                    <h3>Bridging the gap between Designers and Developers</h3>
+                    <div class="flex">
+                        <img src="thumb_285929267.jpeg" alt="Avatar" height="50" width="60" style="border-radius: 50%;">
+                        <p style="color:rgb(145, 141, 141)">
+                            Hosted by Jui P. From Ahmedabad User Experience Designers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="Events">
+                <img src="2_event.png" height="160" width="100%">
+                <div class="inner_event">
+                    <p style="color:rgb(145, 141, 141)">Friday,March 29, 8:30 PM</p>
+                    <h3>Let's Talk About Wordpress Over Dinner!!</h3>
+                    <div class="flex">
+                        <img src="thumb_262478452.jpeg" alt="Avatar" height="50" width="60" style="border-radius: 50%;">
+                        <p style="color:rgb(145, 141, 141);">Hosted by Bhargav M. and 2 ot.. From Ahmedabad WordPress</p>
+                    </div>
+                </div>
+            </div>
+            <div class="Events">
+                <img src="1_event.png" height="160" width="100%">
+                <div class="inner_event">
+                    <p style="color:rgb(145, 141, 141)">Saturday,March 30, 9:30 AM</p>
+                    <h3>Magneto MeetUp
+                        <Br> Ahmedabad : MarketPlace</h3>
+                    <div class="flex">
+                        <img src="thumb_274328001.jpeg" alt="Avatar" height="50" width="60" style="border-radius: 50%;">
+                        <p style="color:rgb(145, 141, 141)">
+                            Hosted by vijaygolani From Ahmedabad Magento Mee</p>
+                    </div>
+                </div>
+            </div>
+            <div class="Events">
+                <img src="2_event.png" height="160" width="100%">
+                <div class="inner_event">
+                    <p style="color:rgb(145, 141, 141)">Friday,March 29, 8:30 PM</p>
+                    <h3>Let's Talk About Wordpress Over Dinner!!</h3>
+                    <div class="flex">
+                        <img src="thumb_262478452.jpeg" alt="Avatar" height="50" width="60" style="border-radius: 50%;">
+                        <p style="color:rgb(145, 141, 141);">Hosted by Bhargav M. and 2 ot.. From Ahmedabad WordPress</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h1 style="margin-left:10%">Categories</h1>
+        <h3 style="color:rgb(145, 141, 141);margin-left:10%">Browse groups by categories You're intrested in.</h3>
+        <div class="Main_cat">
+
+            <div class="sub_cat">
+                <img src="600_450131943.jpeg" height="150" width="240" alt="Avatar">
+                <h3>Outdoors & Adventure</h3>
+            </div>
+            <div class="sub_cat">
+                <img src="600_450131949.jpeg" height="150" width="240" alt="Avatar">
+                <h3>Tech</h3>
+            </div>
+            <div class="sub_cat">
+                <img src="600_450131932.jpeg" height="150" width="240" alt="Avatar">
+                <h3>Family</h3>
+            </div>
+            <div class="sub_cat">
+
+
+                <img src="600_450131950.jpeg" height="150" width="240" alt="Avatar">
+                <h3>Health & Wellness</h3>
+
+            </div>
+
+            <div class="sub_cat">
+
+
+                <img src="600_450131948.jpeg" height="150" width="240" alt="Avatar">
+                <h3>Sports & Fitness</h3>
+
+            </div>
+            <div class="sub_cat">
+
+
+                <img src="600_450131931.jpeg" height="150" width="240" alt="Avatar">
+                <h3>Learning</h3>
+
+            </div>
+            <div class="sub_cat">
+
+
+                <img src="600_450131946.jpeg" height="150" width="240" alt="Avatar">
+                <h3>Photography</h3>
+
+            </div>
+            <div class="sub_cat">
+
+
+                <img src="600_450131937.jpeg" height="150" width="240" alt="Avatar">
+                <h3>Food & Drink</h3>
+
+            </div>
+            <div class="sub_cat">
+
+
+                <img src="600_450131951.jpeg" height="150" width="240" alt="Avatar">
+                <h3>Writing</h3>
+
+            </div>
+            <div class="sub_cat">
+
+
+                <img src="600_450131939.jpeg " height="150 " width="240 " alt="Avatar ">
+                <h3>Language & Culture</h3>
+
+            </div>
+            <div class="sub_cat ">
+
+
+                <img src="600_450131942.jpeg " height="150 " width="240 " alt="Avatar ">
+                <h3>Music</h3>
+
+            </div>
+            <div class="sub_cat ">
+
+
+                <img src="600_450131941.jpeg " height="150 " width="240 " alt="Avatar ">
+                <h3>Movements</h3>
+
+            </div>
+            <div class="sub_cat ">
+
+
+                <img src="600_450131940.jpeg " height="150 " width="240 " alt="Avatar ">
+                <h3>LGBTQ</h3>
+
+            </div>
+            <div class="sub_cat ">
+
+
+                <img src="600_450858495.jpeg " height="150 " width="240 " alt="Avatar ">
+                <h3>Film</h3>
+
+            </div>
+            <div class="sub_cat ">
+
+
+                <img src="600_450131938.jpeg " height="150 " width="240 " alt="Avatar ">
+                <h3>Sci-Fi Games</h3>
+
+            </div>
+            <div class="sub_cat ">
+
+
+                <img src="600_450131925.jpeg " height="150 " width="240 " alt="Avatar ">
+                <h3>Beliefs</h3>
+
+            </div>
+            <div class="sub_cat">
+
+
+                <img src="600_450131912.jpeg" height="150" width="240" alt="Avatar">
+                <h3>Arts</h3>
+
+            </div>
+            <div class="sub_cat">
+
+
+                <img src="600_450131926.jpeg " height="150 " width="240 " alt="Avatar ">
+                <h3>Book Club</h3>
+
+            </div>
+            <div class="sub_cat ">
+
+
+                <img src="600_450131930.jpeg " height="150 " width="240 " alt="Avatar ">
+                <h3>Dance</h3>
+
+            </div>
+            <div class="sub_cat ">
+
+
+                <img src="600_450131945.jpeg " height="150 " width="240 " alt="Avatar ">
+                <h3>Pets</h3>
+
+            </div>
+            <div class="sub_cat ">
+
+
+                <img src="600_450131929.jpeg " height="150 " width="240 " alt="Avatar ">
+                <h3>Hobbies & Crafts</h3>
+
+            </div>
+            <div class="sub_cat ">
+
+
+                <img src="600_450131934.jpeg " height="150 " width="240 " alt="Avatar ">
+                <h3>Fashion & Beauty</h3>
+
+            </div>
+            <div class="sub_cat ">
+
+
+                <img src="600_450131947.jpeg " height="150 " width="240 " alt="Avatar ">
+                <h3>Social</h3>
+
+            </div>
+            <div class="sub_cat ">
+
+
+                <img src="600_450131927.jpeg " height="150 " width="240 " alt="Avatar ">
+                <h3>Career & Business</h3>
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="footer_1">
+
+            <h1 style="color:white;text-align:center;padding-top: 50px;">How Meetup Works</h1>
+
+            <div class="inside_footer1" style="margin-left:3%;margin-right:3%;">
+
+                <div style="height: auto;">
+                    <div style="float: left;background-color: #0f1721;height: 100%;">
+                        <img src="search.png" height="50" width="50" style="margin-top:40px;">
+                    </div>
+                    <div style="padding:10px;background-color: #0f1721;margin-left: 50px;">
+                        <h2 style="word-wrap:none;">Discover Groups</h2>
+                        <p>See who’s hosting local events for all the things you love.</p>
+                        <h5 style="color:#00a2c7;">Join Meetup -></h5>
+                    </div>
+                </div>
+
+                <div style="height: auto;">
+                    <div style="float: left;background-color: #0f1721;height: 100%;">
+
+                        <img src=" plus.png " height="50" width="50" style="margin-top:40px; ">
+                    </div>
+                    <div style="padding:10px;background-color: #0f1721;margin-left: 50px;">
+                        <h2>Start a group</h2>
+                        <p>Create your own Meetup group, and draw from a community of millions.</p>
+                        <h5 style="color:#00a2c7;">Get Started -></h5>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_2">
+            <div style="margin-left:20px">
+                <h2>Get the app</h2>
+                <p style="color:#00a2c7">Learn More -></p>
+                <div class="inside_footer_2">
+                    <div>
+                        <img src="download_en.b85d892d.png" height="50" width="110">
+                    </div>
+                    <div>
+                        <img src="download_en.cf6dad40.png" height="50" width="110">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="app_download.1a368bb6.png" height="350" width="150">
+            </div>
+        </div>
+
+
+        <div class="footer_3">
+            <div class="inside_footer_3">
+                <p><u>Start a new group</u></p>
+            </div>
+            <hr style="color:rgba(255, 255, 255, 0.7);border-top:1px;margin-left:30px;margin-right:100px;">
+            <div class="inside_footer_3_flex">
+                <div>
+                    <h4 style="color:white">Your Account</h4>
+                    <p>Sign up</p>
+                    <p>Log in</p>
+                    <a href="help.html" style="color: rgba(255, 255, 255, 0.7);text-decoration: none;">Help</a>
+                </div>
+                <div>
+                    <h4 style="color:white">Discover</h4>
+                    <p>Groups</p>
+                    <p>Calendar</p>
+                    <p>Topics</p>
+                    <p>Cities</p>
+                </div>
+                <div>
+                    <h4 style="color:white"> Meetup</h4>
+                    <p>About</p>
+                    <p>Meetup Pro</p>
+                    <a href="careers.html" style="color: rgba(255, 255, 255, 0.7);text-decoration: none;">Careers</a>
+                    <p>Apps</p>
+                    <p>API</p>
+                </div>
+                <div>
+                    <h4 style="color:white">Follow us</h4>
+                    <div>
+                        <img src="footer.png" height="50" width="auto">
+                    </div>
+                    <p>
+                        <select style="height:50px;width:350px;background:#0f1721;color:white;font-size:25px">
+                                <option value="volvo">English</option>
+                                <option value="saab">Saab</option>
+                                <option value="opel">Opel</option>
+                                <option value="audi">Audi</option>
+                              </select>
+
+                    </p>
+
+                    <div class="inside_footer_2">
+                        <div>
+                            <img src="download_en.b85d892d.png" height="50" width="auto">
+                        </div>
+                        <div>
+                            <img src="download_en.cf6dad40.png" height="50" width="auto">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer_4">
+                <div align="center" style="white-space: wrap;">
+                    <p>© Meetup 2019 . Meetup is a wholly owned subsidiary of WeWork Companies Inc.</p>
+                    <p>Terms of Service . Privacy Policy . Cookie Policy</p>
+                </div>
+            </div>
+        </div>
+
+    </article>
+</body>
+
+</html>

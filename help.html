@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+        body,
+        html {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            /* overflow-x: hidden; */
+        }
+        
+        .header_content {
+            display: flex;
+            margin: 10px;
+            background-color: white;
+        }
+        
+        .start-menu {
+            color: #00A2c7;
+            margin-left: auto;
+            font-weight: bold;
+            border-right: 2px;
+            /* border-right: 2px solid grey; */
+            padding-right: 7px;
+            font-family: Graphik Meetup, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        .div_logo_img {
+            width: 150px;
+            height: 30%;
+            padding: 5px;
+        }
+        
+        .sign_up {
+            margin-left: 1%;
+            margin-right: 1%;
+            margin-right: 1%;
+            color: rgba(46, 62, 72, 0.6);
+            font-family: Graphik Meetup, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        .logo_img {
+            width: 130px;
+            height: auto;
+        }
+        
+        .bg_img_text {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            color: white;
+            font-size: 42px;
+            border: none;
+            text-align: center;
+            word-wrap: normal;
+            font-family: Helvetica;
+            line-height: 1.5;
+        }
+        
+        .bg_img_text1 {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            color: white;
+            font-size: 16px;
+            border: none;
+            text-align: center;
+            line-height: 1.5;
+            word-wrap: normal;
+            font-family: Helvetica;
+        }
+        
+        input[type="search"] {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-sizing: border-box;
+            color: #999;
+            height: 40px;
+            padding-left: 40px;
+            padding-right: 20px;
+            top: 45%;
+            left: 25%;
+            width: 50%;
+            position: absolute;
+            height: 8%;
+        }
+        
+        .header1 {
+            font-size: 32px;
+            font-family: 'Graphik-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            margin-left: 5%;
+            margin-top: 2%;
+            color: #2e3e48;
+            background-color: #f6f7f8
+        }
+        
+        .topics_1 {
+            display: flex;
+            flex-direction: row;
+            /* margin: 10px; */
+            flex-wrap: wrap;
+            background-color: #f6f7f8;
+            padding-bottom: 40px;
+            padding: 40px 40px;
+            padding-top: 0;
+        }
+        
+        .topics_1 div {
+            /* width: 100%; */
+            flex: 0.30 1 30%;
+            background-color: white;
+            margin-left: 2%;
+            margin-top: 12px;
+            padding: 5px;
+            height: 400px;
+            width: 200px;
+            border-radius: 5%;
+            text-align: center;
+            /* margin: 10px; */
+        }
+        
+        .topics_1 p {
+            color: #2E3E48;
+            font-size: 20px;
+            font-family: 'Graphik-Semibold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            font-weight: bold;
+        }
+        
+        .image {
+            width: 80%;
+        }
+        
+        .footer_1 {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 40px;
+            color: #567486;
+            font-family: 'Graphik-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        
+        .footer_2 {
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            color: #979FA4;
+            font-weight: bold;
+            font-size: 16px;
+            font-family: 'source sans pro', helvetica, sans-serif;
+            background: #2E3E48;
+            min-height: 94px;
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+            max-height: 94px;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        
+        @media screen and (max-width:550px) {
+            body {
+                overflow-x: hidden;
+            }
+            .start-menu {
+                display: none;
+            }
+            .div_logo_img {
+                width: 150px;
+                height: 50%;
+                margin-top: 1%;
+            }
+            .sign_up {
+                margin-left: auto;
+                margin-right: 1%;
+                margin-top: 1%;
+            }
+            .header_content {
+                display: flex;
+                margin: 10px;
+                background-color: white;
+            }
+            .bg_img img {
+                height: 420px;
+            }
+            .bg_img_text {
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                width: 80%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                color: white;
+                font-size: 32px;
+                border: none;
+                text-align: center;
+                word-wrap: normal;
+                font-family: Helvetica;
+                line-height: 1.5;
+            }
+            input[type="search"] {
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                box-sizing: border-box;
+                color: #999;
+                height: 40px;
+                padding-left: 40px;
+                padding-right: 20px;
+                top: 55%;
+                left: 6%;
+                width: 90%;
+                position: absolute;
+                height: 8%;
+            }
+            .bg_img_text1 {
+                position: absolute;
+                top: 68%;
+                left: 53%;
+                width: 90%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                color: white;
+                font-size: 16px;
+                border: none;
+                text-align: center;
+                line-height: 1.5;
+                word-wrap: normal;
+                font-family: Helvetica;
+                /* letter-spacing: 1.5px; */
+            }
+            .topics_1 {
+                display: flex;
+                flex-direction: row;
+                /* margin: 10px; */
+                flex-wrap: wrap;
+                background-color: #f6f7f8;
+                padding-bottom: 40px;
+                padding: 0px 0px;
+                padding-top: 0;
+            }
+            .topics_1 div {
+                /* width: 100%; */
+                flex: 0.50 1 50%;
+                background-color: white;
+                margin: auto;
+                margin-bottom: 5%;
+                padding: 5px;
+                height: 315px;
+                width: 200%;
+                border-radius: 5%;
+                text-align: center;
+                /* margin: 10px; */
+            }
+            .topics_1 p {
+                color: #2E3E48;
+                font-size: 20px;
+                font-family: 'Graphik-Semibold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+                font-weight: bold;
+            }
+            .image {
+                width: 80%;
+            }
+            .footer_2 {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                color: #979FA4;
+                font-weight: bold;
+                font-size: 16px;
+                font-family: 'source sans pro', helvetica, sans-serif;
+                background: #2E3E48;
+                min-height: 94px;
+                align-items: center;
+                margin-top: 30px;
+                max-height: 160px;
+                padding-right: 30px;
+                padding-left: 30px;
+                padding: 0;
+            }
+            .footer_2 p {
+                width: 60%;
+                margin-top: 0;
+                padding-top: 0;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body style="">
+    <article class="article_part">
+
+
+        <header class="header_content">
+            <div class="div_logo_img">
+                <img src="logo--script.004ada05.svg" class="logo_img">
+
+            </div>
+            <div class="start-menu">
+
+            </div>
+            <div class="sign_up">
+                <p>Sign in</p>
+
+            </div>
+
+        </header>
+    </article>
+    <section>
+        <div class="bg_img">
+            <img src="[help.meetup.com][895]b5cd91f1a14d5cf13bd2289b8dffcc2e4485d4d3.png" style="width:100%;">
+            <p class="bg_img_text">How can we help you today?</p>
+            <input type="search" name="query" id="query" placeholder="Search" autocomplete="off" aria-label="Search">
+            <p class="bg_img_text1">Popular searches: leadership team, meetup pro, upload photos</p>
+        </div>
+    </section>
+
+
+    <section style="background-color: #f6f7f8">
+        <h1 class="header1">Browse by topic</h1>
+        <div class="topics_1">
+            <div><img src="[help.meetup.com][810]05932a880e9bf888a42faaca6f870b2b7cafdd6d.png" class="image">
+                <p>Organizing and Event</p>
+            </div>
+            <div><img src="[help.meetup.com][136]7e91ee0c2dad91fb75127316be747af631d79126.png" class="image">
+                <p>Account Questions</p>
+            </div>
+            <div><img src="[help.meetup.com][436]f3b4cbac927e5fc0e36798468fa9f99f3c3f40a7.png" class="image">
+                <p>Payment Subscription</p>
+            </div>
+            <div><img src="[help.meetup.com][285]3a61394f15c8b471ed12d3e6fbd93c479be2d291.png" class="image">
+                <p>Technical Issues</p>
+            </div>
+            <div><img src="[help.meetup.com][938]b7a459ed131a7e4ab94a70d98c8e4ab8589793b0.png" class="image">
+                <p>Meetup Pro</p>
+            </div>
+            <div><img src="[help.meetup.com][497]fe8e7258c17688edfb9eb0a16bfbe1041819f981.png" class="image">
+                <p>Policies And Community Guidelines</p>
+            </div>
+
+
+        </div>
+    </section>
+    <div class="footer_1">
+        <a href="201812091_Ass5_Ass6.html" style="color:#567486;text-decoration: none">Back To MeetUp</a>
+        <p>English(US)</p>
+    </div>
+    <div class="footer_2">
+        <p>© Meetup 2019 • Meetup is a wholly owned subsidiary of WeWork Companies Inc.</p>
+        <p>Terms of Service • Privacy Policy • Cookie Policy</p>
+    </div>
+</body>
+
+</html>
